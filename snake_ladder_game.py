@@ -67,4 +67,13 @@ def play_game():
         else:
             usermovement()
             print("\n")
-        whoseturn = 1 - whoseturn   
+        whoseturn = 1 - whoseturn 
+
+# UC7 - Play the game with 2 Player and report which Plaer won the game. 
+    if user_position == 100:
+        print(f"\n User wins in {user_dice_count} rolls! ")
+    elif comp_position == 100:
+        print(f"\n Computer wins in {comp_dice_count} rolls! ")
+
+
+play_game()
