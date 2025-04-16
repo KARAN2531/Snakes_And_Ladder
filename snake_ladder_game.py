@@ -53,3 +53,18 @@ def compmovement():
     elif comp_position + x > 100 or comp_position - x < 0:    
         print(f"Comp stays at {comp_position}") 
     comp_dice_count += 1
+
+#UC6 -  Report the number of times the dice was played to win the game and also the position after every die role. 
+def play_game():
+    print("Enter snakes and ladder")
+    input("Press Enter to make a toss:")
+    toss = random.randint(0,1)
+    whoseturn = toss
+    while not gameover():
+        if whoseturn == 0:
+            compmovement()
+            print("\n")
+        else:
+            usermovement()
+            print("\n")
+        whoseturn = 1 - whoseturn   
